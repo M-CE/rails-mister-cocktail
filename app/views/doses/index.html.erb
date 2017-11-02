@@ -1,0 +1,9 @@
+<h1>Doses#index</h1>
+<hr>
+<%= link_to "Back to Cocktail", cocktail_path(@doses.first.cocktail_id), class: "btn btn-primary" %>
+<hr>
+<% @doses.each do |dose| %>
+<p><%= dose.ingredient.name %></p>
+<p><%= link_to dose.description, cocktail_dose_path(@cocktail, dose)  %></p>
+<% end %>
+<hr>
