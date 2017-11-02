@@ -1,0 +1,10 @@
+<h1>Doses#show</h1>
+<hr>
+<p><%= link_to "Back to #{@cocktail.name}", cocktail_path(@cocktail), class: "btn btn-primary" %></p>
+<hr>
+<p><%= "#{@dose.description} of #{@dose.ingredient.name}" %></p>
+<hr>
+<%= link_to "Delete", dose_path(@dose),
+      method: :delete,
+      data: { confirm: "Are you sure?", }, class: "btn btn-danger" %>
+      
